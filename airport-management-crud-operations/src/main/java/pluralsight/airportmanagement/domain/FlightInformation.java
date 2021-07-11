@@ -15,7 +15,7 @@ public class FlightInformation {
     @Id
     private String id;
 
-    @Indexed(unique = false)
+    @Indexed(unique = true)
     private String internalId;
 
     @Field("departure")
@@ -118,14 +118,4 @@ public class FlightInformation {
     public void setDescription(String description) {
         this.description = description;
     }
-
-	@Override
-	public String toString() {
-		return "FlightInformation [id=" + id + ", internalId=" + internalId + ", departureCity=" + departureCity
-				+ ", destinationCity=" + destinationCity + ", description=" + description + ", type=" + type
-				+ ", isDelayed=" + isDelayed + ", durationMin=" + durationMin + ", departureDate=" + departureDate
-				+ ", aircraft=" + aircraft + ", createdAt=" + createdAt + "]";
-	}
-    
-    
 }
